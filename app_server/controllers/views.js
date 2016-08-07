@@ -9,3 +9,7 @@ module.exports.register = function(req, res, next){
 module.exports.userList = function (req, res, next) {
     res.render('user-list', {title: 'Users'});
 };
+
+module.exports.login = function(req, res, next){
+    res.render('login', {title: 'Login'});
+};

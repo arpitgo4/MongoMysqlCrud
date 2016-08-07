@@ -7,8 +7,9 @@ nodeApp.factory('apisService' , function(){
 	return {
 			"APIs" : (function(obj){				
 						return {
-							'register': '/register',
-							'userList': '/userList'
+							register: '/register',
+							userList: '/userList',
+							login: '/login'
 						}
 			})()
 	}

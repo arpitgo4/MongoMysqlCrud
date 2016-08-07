@@ -40,3 +40,21 @@ module.exports.userList = function (req, res) {
     res.send(result);
   });
 };
+
+/**
+ * REST API to check given login credentials
+ * with database and grant access by sending user' data
+ * or access denied by returning error message.
+ * @param req
+ * @param res
+ */
+module.exports.login = function(req, res){
+  var user = req.body;
+  userModel.find({username: user.username, password: user.password}, function(err, result){
+    if(err) throw err;
+    
+    if(result.length == 1)
+        res.send({user: result[0], message: 'Access Granted'});
+    else res.send({user: null, message: 'Access Denied\nUsername/Password may be wrong!'});
+  });
+};
