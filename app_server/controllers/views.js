@@ -13,3 +13,7 @@ module.exports.userList = function (req, res, next) {
 module.exports.login = function(req, res, next){
     res.render('login', {title: 'Login'});
 };
+
+module.exports.remove = function(req, res, next){
+    res.render('remove-user', {title: 'Remove User'})
+};

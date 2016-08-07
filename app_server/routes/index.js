@@ -18,6 +18,10 @@ router.get('/login', function(req, res, next) {
   viewController.login(req, res, next);
 });
 
+router.get('/remove-user', function(req, res, next){
+  viewController.remove(req, res, next);  
+});
+
 
 /**
  * REST APIs Router
@@ -32,6 +36,10 @@ router.post('/userList', function (req, res, next) {
 
 router.post('/login', function(req, res, next){
   restController.login(req, res, next);
+});
+
+router.post('/removeUser', function(req, res, next){
+  restController.removeUser(req, res, next);
 });
 
 module.exports = router;

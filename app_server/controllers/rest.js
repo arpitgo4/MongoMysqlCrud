@@ -55,6 +55,27 @@ module.exports.login = function(req, res){
     
     if(result.length == 1)
         res.send({user: result[0], message: 'Access Granted'});
-    else res.send({user: null, message: 'Access Denied\nUsername/Password may be wrong!'});
+    else res.send({user: null, message: 'Access Denied! Username/Password may be wrong!'});
+  });
+};
+
+
+/**
+ * REST API for removing user's profile from
+ * database based on user's username.
+ * @param req
+ * @param res
+ */
+module.exports.removeUser = function(req, res){
+  var user = req.body;
+  userModel.find({username: user.username}, function(err, result){
+    if(err) throw err;
+
+    if(result.length == 0)
+        res.send({message : 'User does\'nt exists'});
+    else {
+      result[0].remove();
+      res.send({message: 'User Deleted!'});
+    }
   });
 };

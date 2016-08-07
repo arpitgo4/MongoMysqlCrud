@@ -29,4 +29,10 @@ nodeApp.run(function($rootScope){
         }
         return -1;
     };
+
+    $rootScope.whichDBFromPath = function(){
+        var path = document.location.pathname;
+        return path.substring(0, path.lastIndexOf('/'));
+    }
+
 });

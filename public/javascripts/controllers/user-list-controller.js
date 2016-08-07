@@ -6,12 +6,12 @@
 
 var nodeApp = nodeApp || angular.module('nodeApp', []);
 
-nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService',
-    function ($scope, httpService, apisService) {
+nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService', '$rootScope', 
+    function ($scope, httpService, apisService, $rootScope) {
 
         $scope.init = function () {
             httpService({
-                URI: apisService.APIs.userList,
+                URI: $rootScope.whichDBFromPath() + apisService.APIs.userList,
                 data: '',
                 type: 'post',
                 callback: function (response) {

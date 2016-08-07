@@ -6,12 +6,12 @@
 
 var nodeApp = nodeApp || angular.module('nodeApp', []);
 
-nodeApp.controller('loginController', ['$scope', 'httpService', 'apisService', 'cookieService', '$rootScope', function($scope
+nodeApp.controller('removeUserController', ['$scope', 'httpService', 'apisService', 'cookieService', '$rootScope', function($scope
     , httpService, apisService, cookieService, $rootScope){
 
-    $scope.login = function(){
+    $scope.remove = function(){
         httpService({
-            'URI' : $rootScope.whichDBFromPath() + apisService.APIs.login,
+            'URI' : $rootScope.whichDBFromPath() + apisService.APIs.remove,
             'data' : $scope.user,
             'type' : 'post',
             'callback' : function(response) {
@@ -19,5 +19,5 @@ nodeApp.controller('loginController', ['$scope', 'httpService', 'apisService', '
             }
         })
     }
-    
+
 }]);

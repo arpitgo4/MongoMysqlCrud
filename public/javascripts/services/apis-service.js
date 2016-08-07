@@ -2,15 +2,16 @@
 
 var nodeApp  = nodeApp || angular.module('nodeApp', [])
 
-nodeApp.factory('apisService' , function(){
+nodeApp.factory('apisService' , ['$rootScope', function($rootScope){
 	
 	return {
-			"APIs" : (function(obj){				
+			"APIs" : (function(){				
 						return {
 							register: '/register',
 							userList: '/userList',
-							login: '/login'
+							login: '/login',
+							remove: '/removeUser'
 						}
 			})()
 	}
-});
+}]);
