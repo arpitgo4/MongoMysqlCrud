@@ -4,9 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var userModel = require('./app_server/models/user');
+var userModelMongoDB = require('./app_server/models/mongoDB/user');
+var userModelMysql = require('./app_server/models/mysql/user');
 
-var routes = require('./app_server/routes/index');
+var mongoRoutes = require('./app_server/routes/mongoRouter');
+var mysqlRoutes = require('./app_server/routes/mysqlRouter');
 var users = require('./app_server/routes/users');
 
 var app = express();
@@ -23,8 +25,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/mongo', routes);
-app.use('/users', users);
+app.use('/mongo', mongoRoutes);
+app.use('/mysql', mysqlRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -68,14 +70,30 @@ app.use(function(err, req, res, next) {
     username: 'admin',
     password: 'admin',
   };
-  userModel.find({username: 'admin'}, function(err, result){
+  userModelMongoDB.find({username: 'admin'}, function(err, result){
     if(result.length == 0){
-      userModel.create(admin, function(err){
+      userModelMongoDB.create(admin, function(err){
         if(err) throw err;
         console.log('Admin Account Created!')
       });
     }else return;
   });
+})();
+
+/**
+ * Creates mysql tables (users).
+ */
+(function(){
+  userModelMysql.query("CREATE TABLE IF NOT EXISTS users (" +
+      "id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY," +
+      "firstName VARCHAR(25)," +
+      "lastName VARCHAR(25)," +
+      "username VARCHAR(25)," +
+      "password VARCHAR(25)" + ")"
+      , function(err){
+        if(err) throw err;
+        console.log('Mysql table created!');
+      });
 })();
 
 

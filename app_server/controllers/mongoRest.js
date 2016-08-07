@@ -2,7 +2,7 @@
  * Created by arpit on 7/8/16.
  */
 
-var userModel = require('../models/user');
+var userModel = require('../models/mongoDB/user');
 
 /**
  * REST API for registering new user.
