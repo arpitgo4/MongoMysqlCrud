@@ -22,6 +22,10 @@ router.get('/remove-user', function(req, res, next){
   viewController.remove(req, res, next);  
 });
 
+router.get('/update-user', function(req, res, next){
+  viewController.updateUser(req, res, next);
+});
+
 
 /**
  * REST APIs Router
@@ -42,4 +46,7 @@ router.post('/removeUser', function(req, res, next){
   restController.removeUser(req, res, next);
 });
 
+router.post('/updateUser', function(req, res, next){
+  restController.updateUser(req, res, next);
+});
 module.exports = router;

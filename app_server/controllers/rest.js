@@ -4,10 +4,6 @@
 
 var userModel = require('../models/user');
 
-module.exports.login = function(req, res){
-    
-};
-
 /**
  * REST API for registering new user.
  * gets called from register.ejs by angular AJAX call
@@ -76,6 +72,27 @@ module.exports.removeUser = function(req, res){
     else {
       result[0].remove();
       res.send({message: 'User Deleted!'});
+    }
+  });
+};
+
+/**
+ * REST API to update user's password.
+ * @param req
+ * @param res
+ * @param next
+ */
+module.exports.updateUser = function(req, res, next){
+  var user = req.body;
+  userModel.find({username: user.username, password: user.oldPassword}, function(err, result){
+    if(err) throw err;
+
+    if(result.length == 0)
+        res.send({message: 'User does\'nt exists'});
+    else {
+      result[0].password = user.newPassword;
+      result[0].save();
+      res.send({message: 'Password Updated!'});
     }
   });
 };

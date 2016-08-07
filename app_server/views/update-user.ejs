@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="nodeApp">
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+<%= title %>
+<div id="update_password_form_container_div" ng-controller="updateUserController">
+    <form id="update_password_form">
+        <p>Username : </p><input type="text" name="username" ng-model="user.username" />
+        <p>Old Password : </p><input type="password" name="password" ng-model="user.oldPassword" />
+        <p>New Password : </p><input type="password" name="password" ng-model="user.newPassword" />
+        <p>Confirm New Password : </p><input type="password" name="confirm_password" ng-model="confirmPassword" />
+        <input type="submit" ng-click="update()" value="Update" />
+    </form>
+    <p id="after_update_response">{{ response }}</p>
+</div>
+</body>
+
+<!--libraries dependencies-->
+<script type="text/javascript" src="/javascripts/lib/angular.min.js"></script>
+<!-- angular controller dependencies-->
+<script type="text/javascript" src="/javascripts/controllers/root-controller.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/update-user-controller.js"></script>
+<!--angular service dependencies-->
+<script type="text/javascript" src="/javascripts/services/apis-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/cookie-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/http-service.js"></script>
+
+</html>

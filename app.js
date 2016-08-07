@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var userModel = require('./app_server/models/user');
 
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
@@ -55,6 +56,27 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+/**
+ * It creates Admin profile at startup, if it does'nt 
+ * exists.
+ */
+(function setupMongoDB(){
+  var admin = {
+    firstName: 'Arpit',
+    lastName: 'Goyal',
+    username: 'admin',
+    password: 'admin',
+  };
+  userModel.find({username: 'admin'}, function(err, result){
+    if(result.length == 0){
+      userModel.create(admin, function(err){
+        if(err) throw err;
+        console.log('Admin Account Created!')
+      });
+    }else return;
+  });
+})();
 
 
 module.exports = app;

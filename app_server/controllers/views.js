@@ -17,3 +17,7 @@ module.exports.login = function(req, res, next){
 module.exports.remove = function(req, res, next){
     res.render('remove-user', {title: 'Remove User'})
 };
+
+module.exports.updateUser = function(req, res, next){
+    res.render('update-user', {title: 'Update User'});
+};
