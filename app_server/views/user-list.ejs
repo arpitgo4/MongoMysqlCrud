@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="nodeApp">
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+
+<body>
+<%= title %>
+<div id="registration_form_div" ng-controller="userListController">
+    <div id="user_list">
+        <ul>
+            <li ng-repeat="user in users">
+                <div>
+                    <p>Name : {{ user.firstName }} {{ user.lastName }}, Email Id : {{ user.username }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+<!--libraries dependencies-->
+<script type="text/javascript" src="/javascripts/lib/angular.min.js"></script>
+<!-- angular controller dependencies-->
+<script type="text/javascript" src="/javascripts/controllers/root-controller.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/user-list-controller.js"></script>
+<!--angular service dependencies-->
+<script type="text/javascript" src="/javascripts/services/apis-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/cookie-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/http-service.js"></script>
+
+</html>

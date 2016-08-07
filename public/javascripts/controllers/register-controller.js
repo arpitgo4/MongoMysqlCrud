@@ -16,7 +16,7 @@ nodeApp.controller('registerController', ['$scope', 'httpService', 'apisService'
             'data' : $scope.user,
             'type' : 'post',
             'callback' : function(response) {
-                    
+                $scope.response = response;
             }
         })
     }

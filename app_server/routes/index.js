@@ -12,8 +12,18 @@ router.get('/register', function(req, res, next){
   viewController.register(req, res);
 });
 
+router.get('/user-list', function (req, res, next) {
+  viewController.userList(req, res, next);
+});
+
+
+
 router.post('/register', function(req, res, next){
   restController.register(req, res, next);
+});
+
+router.post('/userList', function (req, res, next) {
+  restController.userList(req, res, next);
 });
 
 module.exports = router;

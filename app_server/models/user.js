@@ -10,7 +10,6 @@ var user = new mongoose.Schema({
     lastName : String,
     username : String,
     password : String
-    /*address : String,*/
-});
+}, {versionKey: false});
 
 module.exports = mongoose.model('User', user);
