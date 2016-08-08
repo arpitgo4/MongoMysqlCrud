@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/services/views-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/login.ejs" afterPath="$PROJECT_DIR$/app_server/views/login.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/register.ejs" afterPath="$PROJECT_DIR$/app_server/views/register.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/remove-user.ejs" afterPath="$PROJECT_DIR$/app_server/views/remove-user.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/update-user.ejs" afterPath="$PROJECT_DIR$/app_server/views/update-user.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/user-list.ejs" afterPath="$PROJECT_DIR$/app_server/views/user-list.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/root-controller.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/root-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-    </list>
+    <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="" />
     <ignored path="GirishUpworkSample.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -529,7 +519,7 @@
       <option name="presentableId" value="Default" />
       <updated>1470556701988</updated>
       <workItem from="1470556703414" duration="21000000" />
-      <workItem from="1470628779521" duration="7767000" />
+      <workItem from="1470628779521" duration="7796000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -594,15 +584,22 @@
       <option name="project" value="LOCAL" />
       <updated>1470657785675</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="new service added for angularjs, all redirection done.">
+      <created>1470658865152</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1470658865152</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28767000" />
+    <option name="totallyTimeSpent" value="28796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -645,7 +642,8 @@
     <MESSAGE value="all mysql and mongo REST apis done" />
     <MESSAGE value="basic layout done" />
     <MESSAGE value="redirection to single page ( user-list)  added, &#10;default error messages aded." />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection to single page ( user-list)  added, &#10;default error messages aded." />
+    <MESSAGE value="new service added for angularjs, all redirection done." />
+    <option name="LAST_COMMIT_MESSAGE" value="new service added for angularjs, all redirection done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
