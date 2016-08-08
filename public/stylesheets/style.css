@@ -19,6 +19,12 @@ form, input {
   margin-bottom: 5px;
 }
 
+#links_to_other_pages {
+  text-align: right;
+  margin-inside: 10px;
+}
+
 a {
-  color: #00B7FF;
+  color: #000000;
+  margin: 10px;
 }

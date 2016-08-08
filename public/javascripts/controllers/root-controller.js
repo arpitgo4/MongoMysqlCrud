@@ -6,7 +6,7 @@
 
 var nodeApp = nodeApp || angular.module('nodeApp', []);
 
-nodeApp.run(function($rootScope){
+nodeApp.run(function($rootScope, viewsService){
     $rootScope.findArrayIndex = function(arr , elem){
         var i=0;
         if(typeof arr=="string"){
@@ -33,6 +33,18 @@ nodeApp.run(function($rootScope){
     $rootScope.whichDBFromPath = function(){
         var path = document.location.pathname;
         return path.substring(0, path.lastIndexOf('/'));
-    }
+    };
+
+    $rootScope.redirectToUpdate = function(){
+        document.location = $rootScope.whichDBFromPath() + viewsService.APIs.update;
+    };
+
+    $rootScope.redirectToRemove = function(){
+        document.location = $rootScope.whichDBFromPath() + viewsService.APIs.remove;
+    };
+
+    $rootScope.redirectToRegister = function(){
+        document.location = $rootScope.whichDBFromPath() + viewsService.APIs.register;
+    };
 
 });
