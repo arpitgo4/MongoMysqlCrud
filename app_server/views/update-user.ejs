@@ -9,11 +9,11 @@
 <h1><%= title %></h1>
 <div id="update_password_form_container_div" ng-controller="updateUserController">
     <form id="update_password_form">
-        <input placeholder="Username" type="text" name="username" ng-model="user.username" /><br>
-        <input type="password" placeholder="Old Password" name="password" ng-model="user.oldPassword" /><br>
-        <input type="password" placeholder="New Password" name="password" ng-model="user.newPassword" /><br>
-        <input type="password" placeholder="Confirm New Password" name="confirm_password" ng-model="confirmPassword" /><br>
-        <input type="submit" ng-click="update()" value="Update" />
+        <input ng-required="true" placeholder="Username" type="text" name="username" ng-model="user.username" /><br>
+        <input ng-required="true" type="password" placeholder="Old Password" name="password" ng-model="user.oldPassword" /><br>
+        <input ng-required="true" type="password" placeholder="New Password" name="password" ng-model="user.newPassword" /><br>
+        <input ng-required="true" type="password" placeholder="Confirm New Password" name="confirm_password" ng-model="confirmPassword" /><br>
+        <input ng-required="true" type="submit" ng-click="update()" value="Update" />
     </form>
     <p id="after_update_response">{{ response }}</p>
 </div>

@@ -12,9 +12,11 @@
         <table id="users_list_table" align="center">
             <th>Name</th>
             <th>Username</th>
+            <th>Password</th>
             <tr ng-repeat="user in users">
                 <td>{{ user.firstName }} {{ user.lastName }}</td>
                 <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
             </tr>
         </table>
     </div>

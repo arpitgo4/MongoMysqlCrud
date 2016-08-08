@@ -9,7 +9,7 @@
 <h1><%= title %></h1>
 <div id="login_form_container_div" ng-controller="removeUserController">
     <form id="login_form">
-        <input type="text" placeholder="Username" name="username" ng-model="user.username" /><br>
+        <input ng-required="true" type="text" placeholder="Username" name="username" ng-model="user.username" /><br>
         <input type="submit" ng-click="remove()" value="Remove User" />
     </form>
     <p id="after_removing_response">{{ response }}</p>

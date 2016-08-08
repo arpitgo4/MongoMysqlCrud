@@ -16,10 +16,10 @@ module.exports.register = function(req, res){
   console.log('User Registerd : ', user);
   userModel.find({username: user.username}, function (err, result) {
     if (result.length != 0)
-      res.send({message: 'Username Exists!'});
+      res.send({message: 'Username Exists!', result: 'failure'});
     else {
       userModel.create(user, function (err) {
-        res.send({message: 'User Registered!'});
+        res.send({message: 'User Registered!', result: 'success'});
       });
     }
   });
@@ -50,8 +50,9 @@ module.exports.login = function(req, res){
     if(err) throw err;
     
     if(result.length == 1)
-        res.send({user: result[0], message: 'Access Granted'});
-    else res.send({user: null, message: 'Access Denied! Username/Password may be wrong!'});
+        res.send({user: result[0], message: 'Access Granted', result: 'success'});
+    else res.send({user: null, message: 'Access Denied! Username/Password may be wrong!', 
+                                                  result: 'failure'});
   });
 };
 
@@ -68,10 +69,10 @@ module.exports.removeUser = function(req, res){
     if(err) throw err;
 
     if(result.length == 0)
-        res.send({message : 'User does\'nt exists'});
+        res.send({message : 'User does\'nt exists', result: 'failure'});
     else {
       result[0].remove();
-      res.send({message: 'User Deleted!'});
+      res.send({message: 'User Deleted!', result: 'success'});
     }
   });
 };
@@ -88,11 +89,11 @@ module.exports.updateUser = function(req, res, next){
     if(err) throw err;
 
     if(result.length == 0)
-        res.send({message: 'User does\'nt exists'});
+        res.send({message: 'User does\'nt exists', result: 'failure'});
     else {
       result[0].password = user.newPassword;
       result[0].save();
-      res.send({message: 'Password Updated!'});
+      res.send({message: 'Password Updated!', result: 'success'});
     }
   });
 };

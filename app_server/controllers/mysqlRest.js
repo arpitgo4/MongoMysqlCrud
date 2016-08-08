@@ -12,8 +12,9 @@ module.exports.login = function(req, res, next){
     , function(err, result){
             if(err) throw err;
             if(result.length == 1)
-                res.send({user: result[0], message: 'Access Granted'});
-            else res.send({user: null, message: 'Access Denied! Username/Password may be wrong!'});
+                res.send({user: result[0], message: 'Access Granted', result: 'success'});
+            else res.send({user: null, message: 'Access Denied! Username/Password may be wrong!',
+                                                result: 'failure'});
     });
 };
 
@@ -26,8 +27,8 @@ module.exports.register = function(req, res, next){
                 queries.register, [user.firstName, user.lastName, user.username, user.password],
                 function(err){
                     if(err) throw err;
-                    if(result.length != 0) res.send('Username Exists!');
-                    else res.send({message: 'User Registered!'});
+                    if(result.length != 0) res.send({message: 'Username Exists!', result: 'failure'});
+                    else res.send({message: 'User Registered!', result: 'success'});
                 }
             );
         }
@@ -37,16 +38,15 @@ module.exports.register = function(req, res, next){
 module.exports.updateUser = function(req, res, next){
     var user = req.body;
     userModel.query(
-        queries.checkIfUsernameExists, [user.username],
+        queries.checkIfUserExists, [user.username, user.oldPassword],
         function(err, result){
             userModel.query(
                 queries.update, [user.newPassword, user.username, user.oldPassword],
                 function (err) {
                     if (err) throw err;
                     if (result.length == 0)
-                        res.send({message: 'User does\'nt exists'});
-
-                    res.send({message: 'Password Updated!'});
+                        res.send({message: 'User does\'nt exists', result: 'failure'});
+                    else res.send({message: 'Password Updated!', result: 'success'});
                 }
             );
         }
@@ -75,8 +75,8 @@ module.exports.removeUser = function(req, res, next) {
                     if (err) throw err;
 
                     if (result.length == 0)
-                        res.send({message: 'User does\'nt exists'});
-                    else res.send({message: 'User Deleted!'});
+                        res.send({message: 'User does\'nt exists', result: 'failure'});
+                    else res.send({message: 'User Deleted!', result: 'success'});
                 }
             );
         }

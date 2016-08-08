@@ -10,13 +10,21 @@ nodeApp.controller('registerController', ['$scope', 'httpService', 'apisService'
                             , httpService, apisService, cookieService, $rootScope){
 
     $scope.register = function(){
-        console.log("Registering : ", $scope.user);
+        
+        if($scope.confirmPassword != $scope.user.password){
+            $scope.response = "Passwords does'nt match!";
+            return;
+        }
+        
         httpService({
             'URI' : $rootScope.whichDBFromPath() + apisService.APIs.register,
             'data' : $scope.user,
             'type' : 'post',
             'callback' : function(response) {
                 $scope.response = response.message;
+
+                if(response.result == 'success')
+                    document.location = $rootScope.whichDBFromPath() + '/user-list';
             }
         })
     }

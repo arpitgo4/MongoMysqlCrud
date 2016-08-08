@@ -16,6 +16,9 @@ nodeApp.controller('loginController', ['$scope', 'httpService', 'apisService', '
             'type' : 'post',
             'callback' : function(response) {
                 $scope.response = response.message;
+
+                if(response.result == 'success')
+                    document.location = $rootScope.whichDBFromPath() + '/user-list';
             }
         })
     }

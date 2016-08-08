@@ -13,9 +13,9 @@
 <h1><%= title %></h1>
 <div id="login_form_container_div" ng-controller="loginController">
     <form id="login_form">
-        <input placeholder="username" type="text" id="username" ng-model="user.username" />
+        <input placeholder="username" ng-required="true" type="text" id="username" ng-model="user.username" />
         <br>
-        <input type="password" placeholder="password" id="password" ng-model="user.password" />
+        <input type="password" ng-required="true" placeholder="password" id="password" ng-model="user.password" />
         <br>
         <p></p><input type="submit" ng-click="login()" value="Login" />
     </form>
