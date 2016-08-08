@@ -6,16 +6,17 @@
 </head>
 
 <body>
-<%= title %>
+<h1><%= title %></h1>
 <div id="user_list_container" ng-controller="userListController">
     <div id="user_list">
-        <ul>
-            <li ng-repeat="user in users">
-                <div>
-                    <p>Name : {{ user.firstName }} {{ user.lastName }}, Username : {{ user.username }}</p>
-                </div>
-            </li>
-        </ul>
+        <table id="users_list_table" align="center">
+            <th>Name</th>
+            <th>Username</th>
+            <tr ng-repeat="user in users">
+                <td>{{ user.firstName }} {{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+            </tr>
+        </table>
     </div>
 </div>
 </body>

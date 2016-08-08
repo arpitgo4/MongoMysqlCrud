@@ -6,15 +6,15 @@
     </head>
 
     <body>
-        Welcome at <%= title %>
+        <h1><%= title %></h1>
         <div id="registration_form_container_div" ng-controller="registerController">
             <form id="registration_form">
-                <p>First Name : </p><input type="text" name="firstName" ng-model="user.firstName" />
-                <p>Last Name : </p><input type="text" name="lastName" ng-model="user.lastName" />
-                <p>Username : </p><input type="text" name="username" ng-model="user.username" />
-                <p>Password : </p><input type="password" name="password" ng-model="user.password" />
-                <p>Confirm Password : </p><input type="password" name="confirm_password" ng-model="confirmPassword" />
-                <input type="submit" ng-click="register()" value="Register" />
+                <input type="text" placeholder="First Name" name="firstName" ng-model="user.firstName" /><br>
+                <input type="text" placeholder="Last Name" name="lastName" ng-model="user.lastName" /><br>
+                <input type="text" placeholder="Username" name="username" ng-model="user.username" /><br>
+                <input type="password" placeholder="Password" name="password" ng-model="user.password" /><br>
+                <input type="password" placeholder="Confirm Password" name="confirm_password" ng-model="confirmPassword" />
+                <p></p><input type="submit" ng-click="register()" value="Register" />
             </form>
             <p id="after_register_response">{{ response }}</p>
         </div>

@@ -6,10 +6,10 @@
 </head>
 
 <body>
-<%= title %>
+<h1><%= title %></h1>
 <div id="login_form_container_div" ng-controller="removeUserController">
     <form id="login_form">
-        <p>Username : </p><input type="text" name="username" ng-model="user.username" />
+        <input type="text" placeholder="Username" name="username" ng-model="user.username" /><br>
         <input type="submit" ng-click="remove()" value="Remove User" />
     </form>
     <p id="after_removing_response">{{ response }}</p>

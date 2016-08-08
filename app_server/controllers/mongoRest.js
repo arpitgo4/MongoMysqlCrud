@@ -16,10 +16,10 @@ module.exports.register = function(req, res){
   console.log('User Registerd : ', user);
   userModel.find({username: user.username}, function (err, result) {
     if (result.length != 0)
-      res.send('Username Exists!');
+      res.send({message: 'Username Exists!'});
     else {
       userModel.create(user, function (err) {
-        res.send('User Registered!');
+        res.send({message: 'User Registered!'});
       });
     }
   });

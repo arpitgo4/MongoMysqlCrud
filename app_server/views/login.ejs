@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--CSS dependencies-->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
 
 <body>
-<%= title %>
+<h1><%= title %></h1>
 <div id="login_form_container_div" ng-controller="loginController">
     <form id="login_form">
-        <p>Username : </p><input type="text" name="username" ng-model="user.username" />
-        <p>Password : </p><input type="password" name="password" ng-model="user.password" />
-        <input type="submit" ng-click="login()" value="Login" />
+        <input placeholder="username" type="text" id="username" ng-model="user.username" />
+        <br>
+        <input type="password" placeholder="password" id="password" ng-model="user.password" />
+        <br>
+        <p></p><input type="submit" ng-click="login()" value="Login" />
     </form>
     <p id="after_login_response">{{ response }}</p>
 </div>
