@@ -8,7 +8,7 @@ var db = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
     password: 'root',
-    database: 'node_app'
+    database: 'user_app'
 });
 
 module.exports = db;
