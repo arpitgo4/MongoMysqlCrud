@@ -9,6 +9,8 @@ var util = require('../util/validation');
 module.exports.login = function(req, res, next){
     var user = req.body;
     if(!util.isValid(user, ['username', 'password'], res)) return;
+    if(!util.isValidDataType(user, {username: 'string', password: 'password'}, res)) return;
+
     userModel.query(
         queries.login, [user.username, user.password]
     , function(err, result){
@@ -22,7 +24,9 @@ module.exports.login = function(req, res, next){
 
 module.exports.register = function(req, res, next){
     var user = req.body;
-    if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res))
+    if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res)) return;
+    if(!util.isValidDataType(user, {firstName: 'string', lastName: 'string', username: 'string', password: 'password'}, res))
+        return;
     userModel.query(
         queries.checkIfUsernameExists, [user.username],
         function(err, result){
@@ -41,6 +45,8 @@ module.exports.register = function(req, res, next){
 module.exports.updateUser = function(req, res, next){
     var user = req.body;
     if(!util.isValid(user, ['username', 'oldPassword', 'newPassword'], res)) return;
+    if(!util.isValidDataType(user, {username: 'string', oldPassword: 'password', newPassword: 'password'}, res)) return;
+    
     userModel.query(
         queries.checkIfUserExists, [user.username, user.oldPassword],
         function(err, result){
@@ -71,6 +77,8 @@ module.exports.userList = function(req, res, next){
 module.exports.removeUser = function(req, res, next) {
     var user = req.body;
     if(!util.isValid(user, ['username'], res)) return;
+    if(!util.isValidDataType(user, {username: 'string'}, res)) return;
+
     userModel.query(
         queries.checkIfUsernameExists, [user.username],
         function(err, result){
