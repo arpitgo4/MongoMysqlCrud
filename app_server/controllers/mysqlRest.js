@@ -8,9 +8,11 @@ var util = require('../util/validation');
 
 module.exports.login = function(req, res, next){
     var user = req.body;
+    var session = req.session;
     if(!util.isValid(user, ['username', 'password'], res)) return;
     if(!util.isValidDataType(user, {username: 'string', password: 'password'}, res)) return;
 
+    session.username = user.username;
     userModel.query(
         queries.login, [user.username, user.password]
     , function(err, result){
@@ -24,9 +26,11 @@ module.exports.login = function(req, res, next){
 
 module.exports.register = function(req, res, next){
     var user = req.body;
+    var session = req.session;
     if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res)) return;
     if(!util.isValidDataType(user, {firstName: 'string', lastName: 'string', username: 'string', password: 'password'}, res))
         return;
+    session.username = user.username;
     userModel.query(
         queries.checkIfUsernameExists, [user.username],
         function(err, result){
@@ -44,14 +48,15 @@ module.exports.register = function(req, res, next){
 
 module.exports.updateUser = function(req, res, next){
     var user = req.body;
-    if(!util.isValid(user, ['username', 'oldPassword', 'newPassword'], res)) return;
-    if(!util.isValidDataType(user, {username: 'string', oldPassword: 'password', newPassword: 'password'}, res)) return;
+    var session = req.session;
+    if(!util.isValid(user, ['oldPassword', 'newPassword'], res)) return;
+    if(!util.isValidDataType(user, {oldPassword: 'password', newPassword: 'password'}, res)) return;
     
     userModel.query(
-        queries.checkIfUserExists, [user.username, user.oldPassword],
+        queries.checkIfUserExists, [session.username, user.oldPassword],
         function(err, result){
             userModel.query(
-                queries.update, [user.newPassword, user.username, user.oldPassword],
+                queries.update, [user.newPassword, session.username, user.oldPassword],
                 function (err) {
                     if (err) throw err;
                     if (result.length == 0)

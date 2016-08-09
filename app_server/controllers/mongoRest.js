@@ -14,6 +14,7 @@ var util = require('../util/validation');
  */
 module.exports.register = function(req, res){
   var user = req.body;
+  var session = req.session;
   console.log('User', user);
   if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res))
     return;
@@ -21,6 +22,7 @@ module.exports.register = function(req, res){
   if(!util.isValidDataType(user, {firstName: 'string', lastName: 'string', username: 'string', password: 'password'}, res))
     return;
 
+  session.username = user.username;
   console.log('User Registerd : ', user);
   userModel.find({username: user.username}, function (err, result) {
     if (result.length != 0)
@@ -105,7 +107,6 @@ module.exports.removeUser = function(req, res){
 module.exports.updateUser = function(req, res, next){
   var user = req.body;
   var session = req.session;
-  console.log('username from session : ', session.username);
   if(!util.isValid(user, ['oldPassword', 'newPassword'], res)) return;
   if(!util.isValidDataType(user, {oldPassword: 'password', newPassword: 'password'}, res)) return;
   userModel.find({username: session.username, password: user.oldPassword}, function(err, result){
