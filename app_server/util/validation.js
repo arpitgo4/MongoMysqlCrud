@@ -60,7 +60,7 @@ module.exports.isValidDataType = function(obj, dataTypes, res){
  */
 function isEmptyOrUndefined(param){
     if(param == undefined) return true;
-    else if(param === '') return true;
+    else if(param.trim() === '') return true;
     else return false;
 };
     
