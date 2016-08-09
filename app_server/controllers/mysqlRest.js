@@ -4,9 +4,11 @@
 
 var userModel = require('../models/mysql/user');
 var queries = require('../models/queries');
+var util = require('../util/validation');
 
 module.exports.login = function(req, res, next){
     var user = req.body;
+    if(!util.isValid(user, ['username', 'password'], res)) return;
     userModel.query(
         queries.login, [user.username, user.password]
     , function(err, result){
@@ -20,6 +22,7 @@ module.exports.login = function(req, res, next){
 
 module.exports.register = function(req, res, next){
     var user = req.body;
+    if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res))
     userModel.query(
         queries.checkIfUsernameExists, [user.username],
         function(err, result){
@@ -37,6 +40,7 @@ module.exports.register = function(req, res, next){
 
 module.exports.updateUser = function(req, res, next){
     var user = req.body;
+    if(!util.isValid(user, ['username', 'oldPassword', 'newPassword'], res)) return;
     userModel.query(
         queries.checkIfUserExists, [user.username, user.oldPassword],
         function(err, result){
@@ -66,6 +70,7 @@ module.exports.userList = function(req, res, next){
 
 module.exports.removeUser = function(req, res, next) {
     var user = req.body;
+    if(!util.isValid(user, ['username'], res)) return;
     userModel.query(
         queries.checkIfUsernameExists, [user.username],
         function(err, result){

@@ -15,7 +15,7 @@ var util = require('../util/validation');
 module.exports.register = function(req, res){
   var user = req.body;
   console.log('User', user);
-  if(!util.isUserValidToRegister(user, res))
+  if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password'], res))
     return;
 
   console.log('User Registerd : ', user);
@@ -52,7 +52,7 @@ module.exports.userList = function (req, res) {
 module.exports.login = function(req, res){
   var user = req.body;
 
-  if(!util.isUserValidToLogin(user, res)) return;
+  if(!util.isValid(user, ['username', 'password'], res)) return;
 
   userModel.find({username: user.username, password: user.password}, function(err, result){
     if(err) throw err;
@@ -73,7 +73,7 @@ module.exports.login = function(req, res){
  */
 module.exports.removeUser = function(req, res){
   var user = req.body;
-  if(!util.isUserValidToRemove(user, res)) return;
+  if(!util.isValid(user, ['username'], res)) return;
 
   userModel.find({username: user.username}, function(err, result){
     if(err) throw err;
@@ -95,7 +95,7 @@ module.exports.removeUser = function(req, res){
  */
 module.exports.updateUser = function(req, res, next){
   var user = req.body;
-  if(!util.isUserValidToUpdate(user, res)) return;
+  if(!util.isValid(user, ['username', 'oldPassword', 'newPassword'], res)) return;
   userModel.find({username: user.username, password: user.oldPassword}, function(err, result){
     if(err) throw err;
 

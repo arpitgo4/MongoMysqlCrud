@@ -2,69 +2,19 @@
  * Created by arpit on 9/8/16.
  */
 
-module.exports.isUserValidToRegister = function (user, res){
-    var valid = true;
-    if(isEmptyOrUndefined(user)) {
+module.exports.isValid = function(user, params, res){
+    if(user == undefined){
         sendError('user', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.firstName)) {
-        sendError('first name', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.lastName)) {
-        sendError('last name', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.username)) {
-        sendError('username', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.password)) {
-        sendError('password', res);
-        valid = false;
+        return false;
     }
-    
-    return valid;
+    for(var i = 0; i < params.length; i++){
+        if(isEmptyOrUndefined(user[params[i]])){
+            sendError(params[i], res);
+            return false;
+        }
+    }
+    return true;
 };
-
-module.exports.isUserValidToLogin = function(user, res){
-    var valid = true;
-    if(isEmptyOrUndefined(user)){
-        sendError('user', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.username)){
-        sendError('username', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.password)){
-        sendError('password',res);
-        valid = false;
-    }
-    return valid;
-};
-
-module.exports.isUserValidToRemove = function(user, res){
-    var valid = true;
-    if(isEmptyOrUndefined(user)){
-        sendError('user', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.username)){
-        sendError('username', res);
-        valid = false;
-    }
-    return valid;
-};
-
-module.exports.isUserValidToUpdate = function(user, res){
-    var valid = true;
-    if(isEmptyOrUndefined(user.username)){
-        sendError('username', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.oldPassword)){
-        sendError('old password', res);
-        valid = false;
-    }else if(isEmptyOrUndefined(user.newPassword)){
-        sendError('new password', res);
-        valid = false;
-    }
-    return valid;
-}
 
 function isEmptyOrUndefined(param){
     if(param == undefined) return true;
@@ -75,3 +25,8 @@ function isEmptyOrUndefined(param){
 function sendError(parameter, res){
     res.send({message: parameter + ' missing', result: 'failure'});
 };
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
