@@ -1,0 +1,13 @@
+Mongo APIs :
+
+ /mongo/login --> POST --> {username: '', password: ''}
+ /mongo/register --> POST --> {firstName: '', lastName: '', username: '', password: ''}
+ /mongo/userList --> POST --> {}
+ /mongo/updateUser --> POST --> {oldPassword: '', newPassword: ''}
+ /mongo/removeUser --> POST --> {username: ''}
+
+ /mysql/login --> POST --> {username: '', password: ''}
+ /mysql/register --> POST --> {firstName: '', lastName: '', username: '', password: ''}
+ /mysql/userList --> POST --> {}
+ /mysql/updateUser --> POST --> {oldPassword: '', newPassword: ''}
+ /mysql/removeUser --> POST --> {username: ''}
