@@ -40,6 +40,8 @@ module.exports.register = function(req, res){
  * @param res
  */
 module.exports.userList = function (req, res) {
+  var session = req.session;
+  console.log('username from session: ',session.username);
   userModel.find({}, function (err, result) {
     res.send(result);
   });
@@ -54,9 +56,12 @@ module.exports.userList = function (req, res) {
  */
 module.exports.login = function(req, res){
   var user = req.body;
+  var session = req.session;
 
   if(!util.isValid(user, ['username', 'password'], res)) return;
   if(!util.isValidDataType(user, {username: 'string', password: 'password'}, res)) return;
+
+  session.username = user.username;
   userModel.find({username: user.username, password: user.password}, function(err, result){
     if(err) throw err;
     
@@ -99,9 +104,11 @@ module.exports.removeUser = function(req, res){
  */
 module.exports.updateUser = function(req, res, next){
   var user = req.body;
-  if(!util.isValid(user, ['username', 'oldPassword', 'newPassword'], res)) return;
-  if(!util.isValidDataType(user, {username: 'string', oldPassword: 'password', newPassword: 'password'}, res)) return;
-  userModel.find({username: user.username, password: user.oldPassword}, function(err, result){
+  var session = req.session;
+  console.log('username from session : ', session.username);
+  if(!util.isValid(user, ['oldPassword', 'newPassword'], res)) return;
+  if(!util.isValidDataType(user, {oldPassword: 'password', newPassword: 'password'}, res)) return;
+  userModel.find({username: session.username, password: user.oldPassword}, function(err, result){
     if(err) throw err;
 
     if(result.length == 0)
