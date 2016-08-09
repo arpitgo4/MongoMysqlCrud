@@ -3,6 +3,7 @@
  */
 
 var userModel = require('../models/mongoDB/user');
+var util = require('../util/validation');
 
 /**
  * REST API for registering new user.
@@ -13,6 +14,10 @@ var userModel = require('../models/mongoDB/user');
  */
 module.exports.register = function(req, res){
   var user = req.body;
+  console.log('User', user);
+  if(!util.isUserValidToRegister(user, res))
+    return;
+
   console.log('User Registerd : ', user);
   userModel.find({username: user.username}, function (err, result) {
     if (result.length != 0)
@@ -46,6 +51,9 @@ module.exports.userList = function (req, res) {
  */
 module.exports.login = function(req, res){
   var user = req.body;
+
+  if(!util.isUserValidToLogin(user, res)) return;
+
   userModel.find({username: user.username, password: user.password}, function(err, result){
     if(err) throw err;
     
@@ -65,6 +73,8 @@ module.exports.login = function(req, res){
  */
 module.exports.removeUser = function(req, res){
   var user = req.body;
+  if(!util.isUserValidToRemove(user, res)) return;
+
   userModel.find({username: user.username}, function(err, result){
     if(err) throw err;
 
@@ -85,6 +95,7 @@ module.exports.removeUser = function(req, res){
  */
 module.exports.updateUser = function(req, res, next){
   var user = req.body;
+  if(!util.isUserValidToUpdate(user, res)) return;
   userModel.find({username: user.username, password: user.oldPassword}, function(err, result){
     if(err) throw err;
 
