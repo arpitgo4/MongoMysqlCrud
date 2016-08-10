@@ -1,6 +1,10 @@
 /**
  * Created by arpit on 7/8/16.
  */
+/**
+ * module for all the MySQL related functionality
+ * and logic
+ */
 
 var userModel = require('../models/mysql/user');
 var queries = require('../models/queries');

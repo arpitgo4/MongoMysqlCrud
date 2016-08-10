@@ -1,4 +1,6 @@
 /**
+ * Module for all the views for the application.
+ * 
  * Created by arpit on 7/8/16.
  */
 

@@ -10,7 +10,6 @@ var userModelMysql = require('./app_server/models/mysql/user');
 
 var mongoRoutes = require('./app_server/routes/mongoRouter');
 var mysqlRoutes = require('./app_server/routes/mysqlRouter');
-var users = require('./app_server/routes/users');
 
 var app = express();
 

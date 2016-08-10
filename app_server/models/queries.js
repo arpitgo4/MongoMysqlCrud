@@ -1,7 +1,9 @@
 /**
  * Created by arpit on 7/8/16.
  */
-
+/**
+ * Module for defining SQL queries.
+ */
 var queries = {
     login: "SELECT * FROM users WHERE username=? AND password=?;",
     register: "INSERT INTO users (firstName, lastName, username, password) VALUES (?,?,?,?);",

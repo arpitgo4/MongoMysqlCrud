@@ -1,4 +1,6 @@
 /**
+ * Model for interacting with mongoDB.
+ * 
  * Created by arpit on 7/8/16.
  */
 

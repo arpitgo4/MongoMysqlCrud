@@ -1,10 +1,17 @@
+/**
+ *  This module acts as a router to route 
+ *  all mongodb related to calls to defined 
+ *  controllers.
+ */
+
 var express = require('express');
 var router = express.Router();
 var viewController =  require('../controllers/views');
 var restController = require('../controllers/mongoRest');
 
 /**
- * View Router
+ * View Router for routing views request to 
+ * required controller.
  */
 router.get('/register', function(req, res, next){
   viewController.register(req, res);
@@ -28,7 +35,8 @@ router.get('/update-user', function(req, res, next){
 
 
 /**
- * REST APIs Router
+ * REST APIs Router for routing request to required
+ * controller.
  */
 router.post('/register', function(req, res, next){
   restController.register(req, res, next);

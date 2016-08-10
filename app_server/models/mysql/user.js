@@ -1,4 +1,6 @@
 /**
+ * Module for interacting with MySQL. 
+ * 
  * Created by arpit on 7/8/16.
  */
 

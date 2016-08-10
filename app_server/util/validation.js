@@ -2,6 +2,11 @@
  * Created by arpit on 9/8/16.
  */
 
+/**
+ * Module to define all validation
+ * logic for APIs.
+ */
+
 var constants = require('./constants');
 
 /**
@@ -37,7 +42,6 @@ module.exports.isValid = function(user, params, res){
 module.exports.isValidDataType = function(obj, dataTypes, res){
     var isValid = true;
     for(var key in obj){
-        console.log('Checking', key);
         if(dataTypes[key] == 'password'){
             if(!isValidPassword(obj[key])){
                 sendWeakPasswordError(res);

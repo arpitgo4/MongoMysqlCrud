@@ -1,6 +1,10 @@
 /**
  * Created by arpit on 7/8/16.
  */
+/**
+ * module for all the mongoDB related functionality 
+ * and logic
+ */
 
 var userModel = require('../models/mongoDB/user');
 var util = require('../util/validation');
