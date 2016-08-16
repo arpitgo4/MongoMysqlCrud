@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/models/mysqlViews.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mysql/user.js" afterPath="$PROJECT_DIR$/app_server/models/mysql/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mysqlTables.js" afterPath="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
     </list>
     <ignored path="GirishUpworkSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysqlViews.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mysqlViews.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/models/mysqlViews.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="36">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -112,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysqlTables.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mysqlTables.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_server/models/mysqlTables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+            <state relative-caret-position="240">
+              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -174,10 +170,10 @@
         <option value="$PROJECT_DIR$/app_server/controllers/views.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app_server/models/mysql/user.js" />
-        <option value="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
         <option value="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app_server/models/mysqlViews.js" />
+        <option value="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
       </list>
     </option>
   </component>
@@ -425,7 +421,7 @@
       <workItem from="1470820715075" duration="13000" />
       <workItem from="1470821126522" duration="8000" />
       <workItem from="1470821173722" duration="14000" />
-      <workItem from="1471335338839" duration="10389000" />
+      <workItem from="1471335338839" duration="11420000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -567,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470808034593</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="views added , 2 stored procedures added one left.&#10;All implementatiton code added.&#10;Everything setting up nicely">
+      <created>1471351193548</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1471351193548</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57779000" />
+    <option name="totallyTimeSpent" value="58810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -582,7 +585,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -629,7 +632,8 @@
     <MESSAGE value="apis usage doc added." />
     <MESSAGE value="comments added" />
     <MESSAGE value="package.json developer info added" />
-    <option name="LAST_COMMIT_MESSAGE" value="package.json developer info added" />
+    <MESSAGE value="views added , 2 stored procedures added one left.&#10;All implementatiton code added.&#10;Everything setting up nicely" />
+    <option name="LAST_COMMIT_MESSAGE" value="views added , 2 stored procedures added one left.&#10;All implementatiton code added.&#10;Everything setting up nicely" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,14 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/models/queries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/mysql/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -982,16 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/models/mysqlTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1002,8 +988,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/mysqlViews.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/queries.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/mysqlTables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
