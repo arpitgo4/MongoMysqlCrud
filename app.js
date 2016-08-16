@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var userModelMongoDB = require('./app_server/models/mongoDB/user');
 var userModelMysql = require('./app_server/models/mysql/user');
 
+var mysqlTables = require('./app_server/models/mysqlTables');
+var mysqlSPs = require('./app_server/models/mysqlSPs');
+var mysqlViews = require('./app_server/models/mysqlViews');
+
 var mongoRoutes = require('./app_server/routes/mongoRouter');
 var mysqlRoutes = require('./app_server/routes/mysqlRouter');
 
@@ -82,20 +86,42 @@ app.use(function(err, req, res, next) {
 })();
 
 /**
- * Creates mysql tables (users).
+ * Creates mysql tables (users, company, country).
  */
 (function(){
-  userModelMysql.query("CREATE TABLE IF NOT EXISTS users (" +
-      "id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY," +
-      "firstName VARCHAR(25)," +
-      "lastName VARCHAR(25)," +
-      "username VARCHAR(25)," +
-      "password VARCHAR(25)" + ")"
+  for(var key in mysqlTables){
+    userModelMysql.query(mysqlTables[key]
       , function(err){
         if(err) throw err;
-        console.log('Mysql table created!');
+        console.log(key + ' table created!');
       });
+  }
 })();
 
+/**
+ * Creates mysql procedures
+ */
+(function(){
+  for(var key in mysqlSPs){
+    userModelMysql.query(mysqlSPs[key]
+        , function(err){
+          if(err) throw err;
+          console.log(key + ' SP created!');
+        });
+  }
+})();
+
+/**
+ * Creates mysql views (user_login_view)
+ */
+(function(){
+  for(var key in mysqlViews){
+    userModelMysql.query(mysqlViews[key]
+        , function(err){
+          if(err) throw err;
+          console.log(key + ' view created!');
+        });
+  }
+})();
 
 module.exports = app;
