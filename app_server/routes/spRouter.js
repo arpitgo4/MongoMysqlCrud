@@ -14,6 +14,6 @@ router.post('/allUserWithFilter', restController.allUsersWithFilter);
 
 router.get('/loginWithSP', viewController.loginWithSP);
 router.get('/createUserWithSP', viewController.createUserWithSP);
-router.get('/allUserWithFilter', viewController.allUsersWithFilter);
+router.get('/allUserWithFilter', viewController.allUserWithFilter);
 
 module.exports = router;

@@ -11,7 +11,11 @@ var queries = {
     checkIfUsernameExists: "SELECT * FROM users WHERE username=?;",
     allUser: "SELECT * FROM users;", 
     removeUser: "DELETE FROM users WHERE username=?;",
-    checkIfUserExists: "SELECT * FROM users WHERE username=? AND password=?;"
+    checkIfUserExists: "SELECT * FROM users WHERE username=? AND password=?;",
+
+    loginSP: "CALL login_procedure(?, ?, @result); SELECT @result;",
+    createUserSP: "CALL create_new_user_procedure(?, ?, ?, ?, ?, ?, @result); SELECT @result;",
+    usersWithFilterSP: "CALL all_users_procedure(?, ?);"
 };
 
 module.exports = queries;
