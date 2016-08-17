@@ -43,9 +43,17 @@ module.exports.getAllCompaniesAndCountries = function(req, res, next){
     userModel.query(queries.allCompaniesAndCountries, function(err, result){
         if(err) throw err;
 
-        console.log(result[0]);
+        console.log(result);
 
-        res.send({companies: ''});
+        var companies = [];
+        var countries = []
+
+        result.forEach(function(row){
+            countries.push({country_id : row.country_id, countryName: row.countryName});
+            companies.push({company_id : row.company_id, companyName: row.companyName});
+        });
+
+        res.send({companies: companies, countries: countries});
     });
 };
 

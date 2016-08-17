@@ -17,7 +17,7 @@ var queries = {
     createUserSP: "CALL create_new_user_procedure(?, ?, ?, ?, ?, ?, @result); SELECT @result;",
     usersWithFilterSP: "CALL all_users_procedure(?, ?);",
 
-    allCompaniesAndCountries: "SELECT * FROM company, country;"
+    allCompaniesAndCountries: "SELECT * FROM country coun LEFT JOIN company comp ON country_id = company_id;"
 };
 
 module.exports = queries;
