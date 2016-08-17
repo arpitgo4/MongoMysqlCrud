@@ -23,12 +23,21 @@ module.exports.isValid = function(user, params, res){
         return false;
     }
     for(var i = 0; i < params.length; i++){
-        if(isEmptyOrUndefined(user[params[i]])){
+        if(typeof(user[params[i]]) == 'number'){
+            if(params[i] < 0 || params[i] > 4)
+                sendCompanyOrCountryError(params[i], res);
+        }
+        else if(isEmptyOrUndefined(user[params[i]])){
+            console.log(params[i]);
             sendError(params[i], res);
             return false;
         }
     }
     return true;
+};
+
+function sendCompanyOrCountryError(parameter, res){
+    res.send({message: parameter + ' out of range [1,4]', result: 'failure'});
 };
 
 /**

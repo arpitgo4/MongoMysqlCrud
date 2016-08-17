@@ -4,6 +4,7 @@
 
 var queries = require('../models/queries');
 var userModel = require('../models/mysql/user');
+var util = require('../util/validation');
 
 module.exports.allUsersWithFilter = function(req, res, next){
     var user = req.body;
@@ -17,6 +18,10 @@ module.exports.allUsersWithFilter = function(req, res, next){
 
 module.exports.loginWithSP = function(req, res, next){
     var user = req.body;
+    
+    if(!util.isValid(user, ['username', 'password'], res)) return;
+    if(!util.isValidDataType(user, {username: 'string', password: 'password'}, res)) return;
+
     userModel.query(queries.loginSP, [user.username, user.password], function(err, result){
         if(err) throw err;
 
@@ -28,6 +33,12 @@ module.exports.loginWithSP = function(req, res, next){
 
 module.exports.createUserWithSP = function(req, res, next){
     var user = req.body;
+    
+    if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password', 'company', 'country'], res)) return;
+    if(!util.isValidDataType(user, {firstName: 'string', lastName: 'string', username: 'string',
+            password: 'password', country: 'number', company: 'number'}, res))
+        return;
+
     userModel.query(queries.createUserSP, [user.firstName, user.lastName, user.username,
                                                 user.password, user.country, user.company],
         function(err, result){

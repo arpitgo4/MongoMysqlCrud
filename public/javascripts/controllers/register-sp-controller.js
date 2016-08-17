@@ -16,6 +16,9 @@ nodeApp.controller('registerController', ['$scope', 'httpService', 'apisService'
             return;
         }
 
+        $scope.user.company = parseInt($scope.user.company);
+        $scope.user.country = parseInt($scope.user.country);
+
         httpService({
             'URI' : $rootScope.whichDBFromPath() + apisService.APIs.createUserWithSP,
             'data' : $scope.user,
