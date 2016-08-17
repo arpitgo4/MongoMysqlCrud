@@ -16,6 +16,7 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
 
         $scope.init = function(){
             setOptionsInSelect();
+            searchUsers(-1, -1);
         };
 
         function searchUsers(company, country){

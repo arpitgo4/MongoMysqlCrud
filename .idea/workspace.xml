@@ -4,6 +4,7 @@
     <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mysqlSPs.js" afterPath="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js" />
     </list>
     <ignored path="GirishUpworkSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="mysqlSPs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+            <state relative-caret-position="501">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -83,8 +84,8 @@
       <file leaf-file-name="user-list-sp-controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+            <state relative-caret-position="47">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -182,8 +183,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/controllers/register-sp-controller.js" />
         <option value="$PROJECT_DIR$/app_server/util/validation.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js" />
         <option value="$PROJECT_DIR$/app_server/controllers/spRest.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js" />
         <option value="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
       </list>
     </option>
@@ -576,7 +577,7 @@
       <workItem from="1470821173722" duration="14000" />
       <workItem from="1471335338839" duration="11899000" />
       <workItem from="1471410489275" duration="13552000" />
-      <workItem from="1471430045645" duration="3126000" />
+      <workItem from="1471430045645" duration="3256000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -809,11 +810,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471432561095</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="all_users_procedure modified for all users.">
+      <created>1471433186710</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1471433186710</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75967000" />
+    <option name="totallyTimeSpent" value="76097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -852,7 +860,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="redirection to single page ( user-list)  added, &#10;default error messages aded." />
     <MESSAGE value="new service added for angularjs, all redirection done." />
     <MESSAGE value="database name changed for mysql model user.js" />
     <MESSAGE value="validations added" />
@@ -877,7 +884,8 @@
     <MESSAGE value="all apis and views working good including previous ones" />
     <MESSAGE value="valdiations in SP  apis added only at server side" />
     <MESSAGE value="country and company bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="country and company bug fixed" />
+    <MESSAGE value="all_users_procedure modified for all users." />
+    <option name="LAST_COMMIT_MESSAGE" value="all_users_procedure modified for all users." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1241,16 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/controllers/spRest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1261,10 +1259,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        <state relative-caret-position="501">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
