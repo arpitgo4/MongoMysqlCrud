@@ -33,11 +33,23 @@ var stored_procedres = {
                             'END IF; ' +
                             'END',
 
-    all_users_procedure: 'DROP PROCEDURE IF EXISTS `all_users_procedure`;' +
+    filter_users_procedure: 'DROP PROCEDURE IF EXISTS `all_users_procedure`;' +
                         'CREATE PROCEDURE `all_users_procedure`(IN com INT, IN cou INT) ' +
                         'BEGIN ' +
                         'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
                         'LEFT JOIN company comp ON u.company = company_id LEFT JOIN country coun ON u.country = country_id where u.company = com OR u.country = cou; ' +
+                        'END',
+
+    all_users_procedure: 'DROP PROCEDURE IF EXISTS `all_users_procedure`;' +
+                        'CREATE PROCEDURE `all_users_procedure`(IN com INT, IN cou INT) ' +
+                        'BEGIN ' +
+                        'IF com = -1 AND cou = -1 THEN' +
+                        'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
+                        'LEFT JOIN company comp ON u.company = company_id LEFT JOIN country coun ON u.country = country_id;' +
+                        'ELSE ' +
+                        'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
+                        'LEFT JOIN company comp ON u.company = company_id LEFT JOIN country coun ON u.country = country_id where u.company = com OR u.country = cou; ' +
+                        'END IF;' +
                         'END'
 };
 
