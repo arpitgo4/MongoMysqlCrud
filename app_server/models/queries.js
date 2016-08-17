@@ -15,7 +15,9 @@ var queries = {
 
     loginSP: "CALL login_procedure(?, ?, @result); SELECT @result;",
     createUserSP: "CALL create_new_user_procedure(?, ?, ?, ?, ?, ?, @result); SELECT @result;",
-    usersWithFilterSP: "CALL all_users_procedure(?, ?);"
+    usersWithFilterSP: "CALL all_users_procedure(?, ?);",
+
+    allCompaniesAndCountries: "SELECT * FROM company, country;"
 };
 
 module.exports = queries;

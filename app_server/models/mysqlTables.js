@@ -15,12 +15,12 @@ var mysqlTables = {
     
     company_table : "DROP TABLE IF EXISTS company;" +
                         "CREATE TABLE IF NOT EXISTS company (" +
-                        "id INT(1) NOT NULL PRIMARY KEY, " +
+                        "company_id INT(1) NOT NULL PRIMARY KEY, " +
                         "companyName VARCHAR(25)" + ")",
     
     country_table :  "DROP TABLE IF EXISTS country;" +
                         "CREATE TABLE IF NOT EXISTS country (" + 
-                        "id INT(1) NOT NULL PRIMARY KEY, " +
+                        "country_id INT(1) NOT NULL PRIMARY KEY, " +
                         "countryName VARCHAR(25)" + ")",
 
     country_table_data: "INSERT INTO country VALUES (1, 'India');" +

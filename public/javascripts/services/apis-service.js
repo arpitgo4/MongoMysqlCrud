@@ -14,7 +14,8 @@ nodeApp.factory('apisService' , ['$rootScope', function($rootScope){
 							update: '/updateUser',
 							loginWithSP: '/loginWithSP',
 							createUserWithSP: '/createUserWithSP',
-							userListWithFilter: '/allUserWithFilter'
+							userListWithFilter: '/allUserWithFilter',
+							allCompaniesAndCountries: 'allCompaniesAndCountries'
 						}
 			})()
 	}

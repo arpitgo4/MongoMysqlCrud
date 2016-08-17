@@ -39,6 +39,16 @@ module.exports.createUserWithSP = function(req, res, next){
     });
 };
 
+module.exports.getAllCompaniesAndCountries = function(req, res, next){
+    userModel.query(queries.allCompaniesAndCountries, function(err, result){
+        if(err) throw err;
+
+        console.log(result[0]);
+
+        res.send({companies: ''});
+    });
+};
+
 function getResultValue(result){
     return result[1][0]['@result'];
 };
