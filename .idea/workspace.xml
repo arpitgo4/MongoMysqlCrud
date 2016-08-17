@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/views/createUserWithSP.ejs" afterPath="$PROJECT_DIR$/app_server/views/createUserWithSP.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/controllers/register-sp-controller.js" afterPath="$PROJECT_DIR$/public/javascripts/controllers/register-sp-controller.js" />
-    </list>
+    <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="" />
     <ignored path="GirishUpworkSample.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,17 +69,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apis-service.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="apis-service.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/services/apis-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="306">
+              <caret line="17" column="67" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createUserWithSP.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createUserWithSP.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/views/createUserWithSP.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -556,7 +552,7 @@
       <workItem from="1470821126522" duration="8000" />
       <workItem from="1470821173722" duration="14000" />
       <workItem from="1471335338839" duration="11899000" />
-      <workItem from="1471410489275" duration="12192000" />
+      <workItem from="1471410489275" duration="12484000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -768,11 +764,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471426516502</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="all apis and views working good including previous ones">
+      <created>1471427143247</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1471427143247</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71481000" />
+    <option name="totallyTimeSpent" value="71773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -811,7 +814,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="update user REST API done" />
     <MESSAGE value="all mysql and mongo REST apis done" />
     <MESSAGE value="basic layout done" />
     <MESSAGE value="redirection to single page ( user-list)  added, &#10;default error messages aded." />
@@ -836,7 +838,8 @@
     <MESSAGE value="id columns of company and country tables changed.&#10;all company and country apis added. for drop down on ui to fll" />
     <MESSAGE value="all companies and countries API done" />
     <MESSAGE value="userListSP done with view integration and rest api" />
-    <option name="LAST_COMMIT_MESSAGE" value="userListSP done with view integration and rest api" />
+    <MESSAGE value="all apis and views working good including previous ones" />
+    <option name="LAST_COMMIT_MESSAGE" value="all apis and views working good including previous ones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1210,14 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/services/apis-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/user-list-sp-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -1242,6 +1237,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/services/apis-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="67" />
           <folding />
         </state>
       </provider>
