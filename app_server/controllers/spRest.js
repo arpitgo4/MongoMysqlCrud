@@ -9,7 +9,7 @@ var util = require('../util/validation');
 module.exports.allUsersWithFilter = function(req, res, next){
     var user = req.body;
 
-    userModel.query(queries.usersWithFilterSP, [user.company, user.country], function(err, result){
+    userModel.query(queries.usersWithFilterSP, [user.country, user.company], function(err, result){
         if(err) throw err;
 
         res.send({userList: result[0]});
@@ -33,7 +33,7 @@ module.exports.loginWithSP = function(req, res, next){
 
 module.exports.createUserWithSP = function(req, res, next){
     var user = req.body;
-    
+
     if(!util.isValid(user, ['firstName', 'lastName', 'username', 'password', 'company', 'country'], res)) return;
     if(!util.isValidDataType(user, {firstName: 'string', lastName: 'string', username: 'string',
             password: 'password', country: 'number', company: 'number'}, res))

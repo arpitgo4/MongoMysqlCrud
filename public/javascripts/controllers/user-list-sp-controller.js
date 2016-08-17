@@ -10,6 +10,7 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
     function ($scope, httpService, apisService, $rootScope) {
 
         $scope.search = function(){
+            console.log($scope.selectedCompany, $scope.selectedCountry);
             searchUsers($scope.selectedCompany, $scope.selectedCountry);
         };
 
