@@ -3,7 +3,7 @@
  */
 
 var stored_procedres = {
-    login_proc : 'DROP PROCEDURE `login_procedure`;' +
+    login_proc : 'DROP PROCEDURE IF EXISTS `login_procedure`;' +
                 'CREATE PROCEDURE `login_procedure` (' +
                 'IN user varchar(25), ' +
                 'IN pass varchar(25), ' +
@@ -17,19 +17,28 @@ var stored_procedres = {
                 'END IF; ' +
                 'END',
 
-    create_new_user_proc :  'DROP PROCEDURE `create_new_user_procedure`;' +
+    create_new_user_proc :  'DROP PROCEDURE IF EXISTS `create_new_user_procedure`;' +
                             'CREATE PROCEDURE `create_new_user_procedure` ( ' +
                             'IN first varchar(25), ' +
                             'IN last varchar(25), ' +
                             'IN user varchar(25), ' +
                             'IN pass varchar(25), ' +
+                            'IN country INT, ' +
+                            'IN company INT, ' +
                             'OUT result INT ) ' +
                             'BEGIN ' +
                             'SELECT count(*) INTO result FROM user_login_view WHERE username = user; ' +
                             'IF result = 0 THEN ' +
-                            'INSERT INTO users (firstName, lastName, username, password) VALUES (first, last, user, pass); ' +
+                            'INSERT INTO users (firstName, lastName, username, password, country, company) VALUES (first, last, user, pass, country, company); ' +
                             'END IF; ' +
-                            'END'
+                            'END',
+
+    all_users_procedure: 'DROP PROCEDURE IF EXISTS `all_users_procedure`;' +
+                        'CREATE PROCEDURE `all_users_procedure`() ' +
+                        'BEGIN ' +
+                        'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
+                        'LEFT JOIN company comp ON u.company = comp.id LEFT JOIN country coun ON u.country = coun.id; ' +
+                        'END'
 };
 
 module.exports = stored_procedres;

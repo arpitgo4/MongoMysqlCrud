@@ -3,8 +3,8 @@
  */
 
 var mysqlTables = {
-    user_table :   "DROP TABLE IF EXISTS users;" +
-                    "CREATE TABLE users (" +
+    user_table :
+                    "CREATE TABLE IF NOT EXISTS users (" +
                     "id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY," +
                     "firstName VARCHAR(25)," +
                     "lastName VARCHAR(25)," +

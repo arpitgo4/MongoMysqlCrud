@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mysqlSPs.js" afterPath="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mysqlTables.js" afterPath="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
     </list>
     <ignored path="GirishUpworkSample.iws" />
@@ -47,7 +48,7 @@
       <file leaf-file-name="mongoRest.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="504">
               <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
@@ -57,18 +58,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/mysql/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="40" column="3" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="3" />
+            <state relative-caret-position="594">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -96,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysqlSPs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mysqlSPs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+            <state relative-caret-position="198">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -108,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysqlTables.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mysqlTables.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/models/mysqlTables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+            <state relative-caret-position="504">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -170,10 +161,10 @@
         <option value="$PROJECT_DIR$/app_server/controllers/views.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app_server/models/mysql/user.js" />
-        <option value="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app_server/models/mysqlViews.js" />
         <option value="$PROJECT_DIR$/app_server/models/mysqlTables.js" />
+        <option value="$PROJECT_DIR$/app_server/models/mysqlSPs.js" />
       </list>
     </option>
   </component>
@@ -187,9 +178,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -421,7 +412,8 @@
       <workItem from="1470820715075" duration="13000" />
       <workItem from="1470821126522" duration="8000" />
       <workItem from="1470821173722" duration="14000" />
-      <workItem from="1471335338839" duration="11420000" />
+      <workItem from="1471335338839" duration="11899000" />
+      <workItem from="1471410489275" duration="2354000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -570,14 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1471351193548</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="default companies and countries added.">
+      <created>1471352201435</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1471352201435</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58810000" />
+    <option name="totallyTimeSpent" value="61643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,7 +584,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -633,7 +632,8 @@
     <MESSAGE value="comments added" />
     <MESSAGE value="package.json developer info added" />
     <MESSAGE value="views added , 2 stored procedures added one left.&#10;All implementatiton code added.&#10;Everything setting up nicely" />
-    <option name="LAST_COMMIT_MESSAGE" value="views added , 2 stored procedures added one left.&#10;All implementatiton code added.&#10;Everything setting up nicely" />
+    <MESSAGE value="default companies and countries added." />
+    <option name="LAST_COMMIT_MESSAGE" value="default companies and countries added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,15 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="39" column="3" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/routes/mysqlRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,13 +906,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="504">
           <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
         </state>
@@ -932,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="40" column="3" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,25 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,10 +971,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/mysqlRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-439">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/mysqlTables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+        <state relative-caret-position="504">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
