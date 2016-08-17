@@ -12,10 +12,11 @@ nodeApp.factory('apisService' , ['$rootScope', function($rootScope){
 							login: '/login',
 							remove: '/removeUser',
 							update: '/updateUser',
+							
 							loginWithSP: '/loginWithSP',
 							createUserWithSP: '/createUserWithSP',
 							userListWithFilter: '/allUserWithFilter',
-							allCompaniesAndCountries: 'allCompaniesAndCountries'
+							allCompaniesAndCountries: '/allCompaniesAndCountries'
 						}
 			})()
 	}

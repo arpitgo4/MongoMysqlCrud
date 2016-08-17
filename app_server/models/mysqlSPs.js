@@ -37,7 +37,7 @@ var stored_procedres = {
                         'CREATE PROCEDURE `all_users_procedure`(IN com INT, IN cou INT) ' +
                         'BEGIN ' +
                         'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
-                        'LEFT JOIN company comp ON u.company = comp.id LEFT JOIN country coun ON u.country = coun.id where u.company = com AND u.country = cou; ' +
+                        'LEFT JOIN company comp ON u.company = company_id LEFT JOIN country coun ON u.country = country_id where u.company = com AND u.country = cou; ' +
                         'END'
 };
 

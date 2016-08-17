@@ -5,22 +5,32 @@
     <link rel="stylesheet" href="/stylesheets/style.css"/>
 </head>
 
-<body>
+<body ng-controller="userListController">
 <h1><%= title %></h1>
 <div id="links_to_other_pages">
-    <a ng-click="redirectToUpdate()" href="">Update</a>
-    <a ng-click="redirectToRemove()" href="">Remove</a>
+    <!--<a ng-click="redirectToUpdate()" href="">Update</a>
+    <a ng-click="redirectToRemove()" href="">Remove</a>-->
+    <select ng-model="selectedCompany"
+            ng-options="company.company_id as company.companyName for company in companies">
+    </select>
+    <select ng-model="selectedCountry"
+            ng-options="country.country_id as country.countryName for country in countries">
+    </select>
+    <!--<select ng-model="selectedCountry">
+        <option ng-repeat="country in countries" value="{{ country.country }}">{{ country.countryName }}</option>
+    </select>-->
+    <input type="button" name="search" value="Search" ng-click="search()" />
 </div>
-<div id="user_list_container" ng-controller="userListController">
+<div id="user_list_container">
     <div id="user_list">
         <table id="users_list_table" align="center">
             <th>Name</th>
-            <th>Username</th>
-            <th>Password</th>
+            <th>Company</th>
+            <th>Country</th>
             <tr ng-repeat="user in users">
                 <td>{{ user.firstName }} {{ user.lastName }}</td>
-                <td>{{ user.company }}</td>
-                <td>{{ user.country }}</td>
+                <td>{{ user.companyName }}</td>
+                <td>{{ user.countryName }}</td>
             </tr>
         </table>
     </div>
