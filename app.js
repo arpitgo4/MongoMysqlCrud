@@ -14,6 +14,7 @@ var mysqlViews = require('./app_server/models/mysqlViews');
 
 var mongoRoutes = require('./app_server/routes/mongoRouter');
 var mysqlRoutes = require('./app_server/routes/mysqlRouter');
+var spRoutes = require('./app_server/routes/spRouter');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/mongo', mongoRoutes);
 app.use('/mysql', mysqlRoutes);
+app.use('/sp', spRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

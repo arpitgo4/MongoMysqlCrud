@@ -34,10 +34,10 @@ var stored_procedres = {
                             'END',
 
     all_users_procedure: 'DROP PROCEDURE IF EXISTS `all_users_procedure`;' +
-                        'CREATE PROCEDURE `all_users_procedure`() ' +
+                        'CREATE PROCEDURE `all_users_procedure`(IN com INT, IN cou INT) ' +
                         'BEGIN ' +
                         'SELECT firstName, lastName, coun.countryName, comp.companyName FROM users u ' +
-                        'LEFT JOIN company comp ON u.company = comp.id LEFT JOIN country coun ON u.country = coun.id; ' +
+                        'LEFT JOIN company comp ON u.company = comp.id LEFT JOIN country coun ON u.country = coun.id where u.company = com AND u.country = cou; ' +
                         'END'
 };
 
