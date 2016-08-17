@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="nodeApp">
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CSS dependencies-->
+    <!--<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+
+<body>
+<h1><%= title %></h1>
+<div id="links_to_other_pages">
+    <a ng-click="redirectToRegister()" href="">Register</a>
+</div>
+<div id="login_form_container_div" ng-controller="loginController">
+    <form id="login_form">
+        <input placeholder="username" ng-required="true" type="text" id="username" ng-model="user.username" />
+        <br>
+        <input type="password" ng-required="true" placeholder="password" id="password" ng-model="user.password" />
+        <br>
+        <p></p><input type="submit" ng-click="login()" value="Login" />
+    </form>
+    <p id="after_login_response">{{ response }}</p>
+</div>
+</body>
+
+<!--libraries dependencies-->
+<script type="text/javascript" src="/javascripts/lib/angular.min.js"></script>
+<!-- angular controller dependencies-->
+<script type="text/javascript" src="/javascripts/controllers/root-controller.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/login-controller.js"></script>
+<!--angular service dependencies-->
+<script type="text/javascript" src="/javascripts/services/apis-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/views-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/cookie-service.js"></script>
+<script type="text/javascript" src="/javascripts/services/http-service.js"></script>
+
+<!--Bootstrap and JQuery dependencies for bootstrap-->
+<script type="text/javascript" src="/javascripts/lib/jquery-3.1.0.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
+</html>
