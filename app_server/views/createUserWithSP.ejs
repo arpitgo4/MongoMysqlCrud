@@ -12,8 +12,12 @@
         <input ng-required="true" type="text" placeholder="First Name" name="firstName" ng-model="user.firstName" /><br>
         <input ng-required="true" type="text" placeholder="Last Name" name="lastName" ng-model="user.lastName" /><br>
         <input ng-required="true" type="text" placeholder="Username" name="username" ng-model="user.username" /><br>
-        <input ng-required="true" type="text" placeholder="Company Name" name="company" ng-model="user.company" /><br>
-        <input ng-required="true" type="text" placeholder="Country" name="country" ng-model="user.country" /><br>
+        <select ng-required="true" type="text" name="company" ng-model="user.company" >
+            <option ng-repeat="company in companies" value="{{company.company_id}}">{{company.companyName}}</option>
+        </select>
+        <select ng-required="true" type="text" name="country" ng-model="user.country" >
+            <option ng-repeat="country in countries" value="{{country.country_id}}">{{country.countryName}}</option>
+        </select><br>
         <input ng-required="true" type="password" placeholder="Password" name="password" ng-model="user.password" /><br>
         <input ng-required="true" type="password" placeholder="Confirm Password" name="confirm_password" ng-model="confirmPassword" />
         <p></p><input type="submit" ng-click="register()" value="Register" />

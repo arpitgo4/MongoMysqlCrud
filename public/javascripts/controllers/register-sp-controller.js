@@ -27,7 +27,23 @@ nodeApp.controller('registerController', ['$scope', 'httpService', 'apisService'
                     document.location = $rootScope.whichDBFromPath() + '/allUserWithFilter';
             }
         })
-    }
+    };
 
+    function setOptionsInSelect(){
+        httpService({
+            URI: $rootScope.whichDBFromPath() + apisService.APIs.allCompaniesAndCountries,
+            data: '',
+            type: 'post',
+            callback: function (response) {
+                $scope.countries = response.countries;
+                $scope.companies = response.companies;
+            }
+        });
+    };
 
+    $scope.init = function(){
+        setOptionsInSelect();
+    };
+
+    $scope.init();
 }]);
