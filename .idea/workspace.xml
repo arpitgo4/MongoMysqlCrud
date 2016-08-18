@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915ce174-33b6-4f12-a6a3-5fab66d97fb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/models/mongoDB/company.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/models/mongoDB/country.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/routes/spMongoRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/util/setupMongoDB.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app_server/routes/spRouter.js" afterPath="$PROJECT_DIR$/app_server/routes/spMysqlRouter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_server/controllers/spMongoRest.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app_server/controllers/spRest.js" afterPath="$PROJECT_DIR$/app_server/controllers/spMysqlRest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/models/mongoDB/user.js" afterPath="$PROJECT_DIR$/app_server/models/mongoDB/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/routes/spMongoRouter.js" afterPath="$PROJECT_DIR$/app_server/routes/spMongoRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_server/routes/spMysqlRouter.js" afterPath="$PROJECT_DIR$/app_server/routes/spMysqlRouter.js" />
     </list>
     <ignored path="GirishUpworkSample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,18 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mysqlSPs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/models/mysqlSPs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,7 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setupMongoDB.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spMysqlRest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_server/controllers/spMysqlRest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="64" column="7" selection-start-line="53" selection-start-column="4" selection-end-line="64" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setupMongoDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/util/setupMongoDB.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
@@ -86,34 +83,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongoRest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
+      <file leaf-file-name="spViews.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_server/controllers/spViews.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1227">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="root-controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/root-controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="company.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/models/mongoDB/company.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state relative-caret-position="108">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spMongoRest.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_server/controllers/spMongoRest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#39#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongoRest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1209">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,20 +120,8 @@
       <file leaf-file-name="spMongoRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/routes/spMongoRouter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spMysqlRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_server/routes/spMysqlRouter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" column="30" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="144">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -157,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/services/http-service.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/services/cookie-service.js" />
         <option value="$PROJECT_DIR$/public/javascripts/controllers/registeration-controller.js" />
         <option value="$PROJECT_DIR$/app_server/models/user.js" />
         <option value="$PROJECT_DIR$/app_server/views/error.ejs" />
@@ -205,9 +190,11 @@
         <option value="$PROJECT_DIR$/app_server/models/mongoDB/user.js" />
         <option value="$PROJECT_DIR$/app_server/models/mongoDB/company.js" />
         <option value="$PROJECT_DIR$/app_server/models/mongoDB/country.js" />
-        <option value="$PROJECT_DIR$/app_server/routes/spMongoRouter.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app_server/util/setupMongoDB.js" />
+        <option value="$PROJECT_DIR$/app_server/routes/spMongoRouter.js" />
+        <option value="$PROJECT_DIR$/app_server/controllers/spMysqlRest.js" />
+        <option value="$PROJECT_DIR$/app_server/controllers/spMongoRest.js" />
       </list>
     </option>
   </component>
@@ -578,7 +565,7 @@
       <workItem from="1471335338839" duration="11899000" />
       <workItem from="1471410489275" duration="13552000" />
       <workItem from="1471430045645" duration="4499000" />
-      <workItem from="1471497910035" duration="5547000" />
+      <workItem from="1471497910035" duration="7707000" />
     </task>
     <task id="LOCAL-00001" summary="register REST API done">
       <created>1470561185030</created>
@@ -832,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471498454185</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="mongoDB company and country collections added with new models.&#10;setupMongoDB function added to get database ready with sample data">
+      <created>1471519390699</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1471519390699</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82887000" />
+    <option name="totallyTimeSpent" value="85047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -875,7 +869,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="database name changed for mysql model user.js" />
     <MESSAGE value="validations added" />
     <MESSAGE value="validation function refactored from a different validaton function for every screen to single function" />
     <MESSAGE value="all the validation for params and data type done.&#10;constants file added." />
@@ -900,7 +893,8 @@
     <MESSAGE value="country and company bug fixed" />
     <MESSAGE value="all_users_procedure modified for all users." />
     <MESSAGE value="All option added in userlist dropdown&#10;stored procedure modified for All option." />
-    <option name="LAST_COMMIT_MESSAGE" value="All option added in userlist dropdown&#10;stored procedure modified for All option." />
+    <MESSAGE value="mongoDB company and country collections added with new models.&#10;setupMongoDB function added to get database ready with sample data" />
+    <option name="LAST_COMMIT_MESSAGE" value="mongoDB company and country collections added with new models.&#10;setupMongoDB function added to get database ready with sample data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,13 +906,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/amelia.bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1674">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/css/amelia.bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117779">
@@ -1140,13 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/controllers/spViews.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/views/createUserWithSP.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -1181,16 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/controllers/spRest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/views/allUserWithFilter.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1219,39 +1189,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1227">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/routes/spMysqlRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="30" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/root-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/routes/spMongoRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1273,14 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_server/models/mongoDB/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_server/models/mongoDB/country.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1295,6 +1229,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/spViews.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/models/mongoDB/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/spMysqlRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="17" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/spMysqlRest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="64" column="7" selection-start-line="53" selection-start-column="4" selection-end-line="64" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/routes/spMongoRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/mongoRest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1209">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_server/controllers/spMongoRest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>

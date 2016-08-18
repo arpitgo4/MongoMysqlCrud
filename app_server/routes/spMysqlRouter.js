@@ -4,7 +4,7 @@
 
 var express = require('express');
 var router = express.Router();
-var restController = require('../controllers/spRest');
+var restController = require('../controllers/spMysqlRest');
 var viewController = require('../controllers/spViews');
 
 
