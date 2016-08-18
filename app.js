@@ -15,7 +15,10 @@ var mysqlViews = require('./app_server/models/mysqlViews');
 
 var mongoRoutes = require('./app_server/routes/mongoRouter');
 var mysqlRoutes = require('./app_server/routes/mysqlRouter');
-var spRoutes = require('./app_server/routes/spRouter');
+var spMysqlRoutes = require('./app_server/routes/spMysqlRouter');
+var spMongoRoutes = require('./app_server/routes/spMongoRouter');
+
+var setupMongoDB = require('./app_server/util/setupMongoDB');
 
 var app = express();
 
@@ -34,7 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/mongo', mongoRoutes);
 app.use('/mysql', mysqlRoutes);
-app.use('/sp', spRoutes);
+app.use('/sp/mysql', spMysqlRoutes);
+app.use('/sp/mongo', spMongoRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -126,5 +130,7 @@ app.use(function(err, req, res, next) {
         });
   }
 })();
+
+setupMongoDB();
 
 module.exports = app;

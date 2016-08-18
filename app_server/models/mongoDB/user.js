@@ -11,7 +11,9 @@ var user = new mongoose.Schema({
     firstName : String,
     lastName : String,
     username : String,
-    password : String
+    password : String,
+    company: String,
+    country: String
 }, {versionKey: false});
 
 module.exports = mongoose.model('User', user);
