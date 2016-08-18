@@ -17,7 +17,9 @@ module.exports.allUsersWithFilter = function(req, res, next){
         });
     }
     else {
-        userModel.find({country: user.country, company: user.company}, function (err, result) {
+        var query = {$or: [{country: user.country}, {company: user.company}]};
+        console.log(JSON.stringify(query));
+        userModel.find(query, function (err, result) {
             if (err) throw err;
 
             res.send({userList: result});

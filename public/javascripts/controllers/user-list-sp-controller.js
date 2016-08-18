@@ -20,8 +20,6 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
         $scope.search = function(){
             console.log($scope.selectedCompany, $scope.selectedCountry);
             if($rootScope.whichDBFromPath().contains('mongo')){
-                console.log('values : ', findName($scope.selectedCompany, $scope.companies, 'company'),
-                    findName($scope.selectedCountry, $scope.countries, 'country'));
                 searchUsers(findName($scope.selectedCompany, $scope.companies, 'company'),
                     findName($scope.selectedCountry, $scope.countries, 'country'));
             }
@@ -39,7 +37,7 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
                 if (country == -1) country = 'All';
             }
 
-            var data = {country: company, company: country};
+            var data = {country: country, company: company};
 
             httpService({
                 URI: $rootScope.whichDBFromPath() + apisService.APIs.userListWithFilter,
