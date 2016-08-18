@@ -13,14 +13,14 @@ module.exports.allUsersWithFilter = function(req, res, next){
         userModel.find({}, function(err, result){
             if(err) throw err;
 
-            res.send({userList: result[0]});
+            res.send({userList: result});
         });
     }
     else {
         userModel.find({country: user.country, company: user.company}, function (err, result) {
             if (err) throw err;
 
-            res.send({userList: result[0]});
+            res.send({userList: result});
         });
     }
 };

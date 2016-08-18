@@ -10,16 +10,20 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
     function ($scope, httpService, apisService, $rootScope) {
 
         function findName(id, list, key){
+            var result = null;
             angular.forEach(list, function(item){
-                if(item._id == id) return item[key];
+                if(item[key+'_id'] == id) result = item[key+'Name'];
             });
+            return result;
         }
 
         $scope.search = function(){
             console.log($scope.selectedCompany, $scope.selectedCountry);
-            if($rootScope.whichDBFromPath().containes('mongo')){
-                searchUsers(findName($scope.selectedCompany),
-                                    findName($scope.selectedCountry));
+            if($rootScope.whichDBFromPath().contains('mongo')){
+                console.log('values : ', findName($scope.selectedCompany, $scope.companies, 'company'),
+                    findName($scope.selectedCountry, $scope.countries, 'country'));
+                searchUsers(findName($scope.selectedCompany, $scope.companies, 'company'),
+                    findName($scope.selectedCountry, $scope.countries, 'country'));
             }
             else searchUsers($scope.selectedCompany, $scope.selectedCountry);
         };
@@ -30,6 +34,11 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
         };
 
         function searchUsers(company, country){
+            if($rootScope.whichDBFromPath().contains('mongo')) {
+                if (company == -1) company = 'All';
+                if (country == -1) country = 'All';
+            }
+
             var data = {country: company, company: country};
 
             httpService({
@@ -37,8 +46,23 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
                 data: data,
                 type: 'post',
                 callback: function (response) {
+                    if($rootScope.whichDBFromPath().contains('mongo')) {
+                        changeCountryAndCompanyParam(response.userList)
+                    }
                     $scope.users = response.userList;
                 }
+            });
+        }
+
+        function changeCountryAndCompanyParam(userList){
+            angular.forEach(userList, function(user){
+                var company = user.company;
+                delete user.company;
+                user.companyName = company;
+
+                var country = user.country;
+                delete user.country;
+                user.countryName = country;
             });
         }
 
@@ -50,14 +74,8 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
                 callback: function (response) {
                     $scope.countries = response.countries;
                     $scope.companies = response.companies;
-                    if($rootScope.whichDBFromPath().contains('mongo')){
-                        $scope.countries.push({country_id: -1, country: 'All'});
-                        $scope.companies.push({company_id: -1, company: 'All'});
-                    }
-                    else {
-                        $scope.countries.push({id: -1, countryName: 'All'});
-                        $scope.companies.push({id: -1, companyName: 'All'});
-                    }
+                    $scope.countries.push({country_id: -1, countryName: 'All'});
+                    $scope.companies.push({company_id: -1, companyName: 'All'});
                 }
             });
         };

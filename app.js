@@ -75,7 +75,7 @@ app.use(function(err, req, res, next) {
  * It creates Admin profile at startup, if it does'nt 
  * exists.
  */
-(function setupMongoDB(){
+/*(function setupMongoDB(){
   var admin = {
     firstName: 'Arpit',
     lastName: 'Goyal',
@@ -90,7 +90,7 @@ app.use(function(err, req, res, next) {
       });
     }else return;
   });
-})();
+})();*/
 
 /**
  * Creates mysql tables (users, company, country).
