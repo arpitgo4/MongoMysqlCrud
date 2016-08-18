@@ -40,6 +40,8 @@ nodeApp.controller('userListController', ['$scope', 'httpService', 'apisService'
                 callback: function (response) {
                     $scope.countries = response.countries;
                     $scope.companies = response.companies;
+                    $scope.countries.push({country_id: -1, countryName: 'All'});
+                    $scope.companies.push({company_id: -1, companyName: 'All'});
                 }
             });
         };
