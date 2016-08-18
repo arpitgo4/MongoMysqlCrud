@@ -5,8 +5,8 @@
 var countryModel = require('../models/mongoDB/country');
 var companyModel = require('../models/mongoDB/company');
 
-var countries = [{country: 'India'}, {country: 'USA'}, {country: 'Japan'}, {country: 'France'}];
-var companies = [{company: 'Facebook'}, {company: 'Google'}, {company: 'Twitter'}, {company: 'Xiaomi'}];
+var countries = [{countryName: 'India'}, {countryName: 'USA'}, {countryName: 'Japan'}, {countryName: 'France'}];
+var companies = [{companyName: 'Facebook'}, {companyName: 'Google'}, {companyName: 'Twitter'}, {companyName: 'Xiaomi'}];
 
 function storeEach(arr, model){
     arr.forEach(function(item){

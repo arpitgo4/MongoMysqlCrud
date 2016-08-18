@@ -9,12 +9,20 @@ var userModel = require('../models/mongoDB/user');
 
 module.exports.allUsersWithFilter = function(req, res, next){
     var user = req.body;
+    if(user.country == 'All' || user.company == 'All'){
+        userModel.find({}, function(err, result){
+            if(err) throw err;
 
-    userModel.find({country: user.country, company: user.company}, function(err, result){
-        if(err) throw err;
+            res.send({userList: result[0]});
+        });
+    }
+    else {
+        userModel.find({country: user.country, company: user.company}, function (err, result) {
+            if (err) throw err;
 
-        res.send({userList: result[0]});
-    });
+            res.send({userList: result[0]});
+        });
+    }
 };
 
 module.exports.loginWithSP = function(req, res, next){
@@ -61,10 +69,10 @@ module.exports.getAllCompaniesAndCountries = function(req, res, next){
             if(err) throw err;
 
             companiesFromDB.forEach(function(company){
-                companies.push({company_id : company._id, companyName: company.company});
+                companies.push({company_id : company._id, companyName: company.companyName});
             });
             countriesFromDB.forEach(function(country){
-                countries.push({country_id : country._id, countryName: country.country});
+                countries.push({country_id : country._id, countryName: country.countryName});
             });
 
             res.send({companies: companies, countries: countries});

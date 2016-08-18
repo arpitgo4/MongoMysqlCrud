@@ -5,7 +5,8 @@
 var mongoose = require('mongoose');
 
 var company = new mongoose.Schema({
-    company: String
+    company_id: mongoose.Schema.ObjectId,
+    companyName: String
 }, {versionKey: false});
 
 module.exports = mongoose.model('company', company);

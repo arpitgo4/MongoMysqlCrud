@@ -5,7 +5,8 @@
 var mongoose = require('mongoose');
 
 var country = new mongoose.Schema({
-    country: String    
+    country_id: mongoose.Schema.ObjectId,
+    countryName: String    
 }, {versionKey: false});
 
 module.exports = mongoose.model('country', country);
